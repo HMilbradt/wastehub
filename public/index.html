@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8"> 
+        <title>WasteHub</title>
+        <!-- JavaScript for Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyC_wXoWjrnmKK_DNGU0Q_h2LAR2HYAQZA8",
+            authDomain: "wastehub-55a96.firebaseapp.com",
+            databaseURL: "https://wastehub-55a96.firebaseio.com",
+            projectId: "wastehub-55a96",
+            storageBucket: "wastehub-55a96.appspot.com",
+            messagingSenderId: "501861867101"
+          };
+          firebase.initializeApp(config);
+        </script>
+        <script src="https://cdn.firebase.com/libs/firebaseui/1.0.1/firebaseui.js"></script>
+                <!-- *******************************************************************************************
+           * TODO(DEVELOPER): Paste the initialization snippet from:
+           * Firebase Console > Overview > Add Firebase to your web app. *
+           ***************************************************************************************** -->
+        <script src="https://cdn.firebase.com/libs/firebaseui/1.0.1/firebaseui.js"></script>
+        <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/1.0.1/firebaseui.css" />
+        <script type="text/javascript">
+          // FirebaseUI config.
+          var uiConfig = {
+            signInSuccessUrl: '<url-to-redirect-to-on-success>',
+            signInOptions: [
+              // Leave the lines as is for the providers you want to offer your users.
+              firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+              firebase.auth.EmailAuthProvider.PROVIDER_ID
+            ],
+            // Terms of service url.
+            tosUrl: '<your-tos-url>'
+          };
+          // Initialize the FirebaseUI Widget using Firebase.
+          var ui = new firebaseui.auth.AuthUI(firebase.auth());
+          // The start method will wait until the DOM is loaded.
+          ui.start('#firebaseui-auth-container', uiConfig);
+        </script>
+        <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/1.0.1/firebaseui.css" />
+        <!-- jQuery (necessary for Bootstrap's
+        JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body> 
+        <nav class="navbar navbar-custom">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span> 
+                    </button>
+                    <a class="navbar-brand" href="index.php">WasteHub</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="index.php">Home</a>    
+                        </li>
+                        <li>
+                            <a href="#">Food</a>
+                        </li> 
+                        <li>
+                            <a href="#">About Us</a>
+                        </li> 
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+                        </li>
+                        <li>
+                            <a href="signup.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div>
+            <div>
+                <img src='images/vancouver-skyline-black-silhouette.svg' alt='Promoting zero food waste' />
+            </div>
+            <div>
+                <h1><center>WasteHub</center></h1>
+            </div>
+            <div id="firebaseui-auth-container"></div>
+            <article>
+                <div class="container-fluid">
+                    <div class="col-md-6 col-md-offset-3">
+                        <section>
+                            <p class="text-justify">
+                            WasteHub is the solution to one of the biggest issues today: food waste. In Metro Vancouver alone, nearly 
+                            $700 million worth of food is wasted every year and about a third of that comes from consumers. Food Vault can
+                            helps to tackle this issue by allowing you to track every biodegradable product in your fridge. It's limited 
+                            to fruits and vegetables only because those products make up a large number of wasted produce.
+                            </p>
+                        </section>
+                        <section>
+                            <br />
+                            <p class="text-justify">
+                            Food Vault is a project by five British Columbia Institute of Technology students, as part of the Computer
+                            Systems Technlogy program. This project is in part with the City of Metro Vancouver to help spread awarness
+                            regarding food waste.
+                            </p>
+                        </section>
+                    </div>
+                </div>    
+            </article>
+        </div>
+        <footer>
+            <center>
+                <p>WasteHub</p>
+                <p>All Rights Reserved &copy</p></center> 
+        </footer>
+    </body>
+</html>
