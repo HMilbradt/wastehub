@@ -1,6 +1,6 @@
 // FirebaseUI config.
 var uiConfig = {
-signInSuccessUrl: '<url-to-redirect-to-on-success>',
+signInSuccessUrl: 'dashboard.html',
 signInOptions: [
   // Leave the lines as is for the providers you want to offer your users.
   firebase.auth.GoogleAuthProvider.PROVIDER_ID,
