@@ -1,11 +1,12 @@
-* {
-    padding: 0px;
-    margin: 0px;
+html, body div {
+    margin: 0;
+    padding: 0;
     font-family: 'Baloo', cursive;
 }
 
 header {
-    font-size: 56px;;
+    font-size: 56px;
+    margin-top: 20px;
 }
 
 .mid {
@@ -13,19 +14,43 @@ header {
 }
 
 .logo {
-    height: 375px;
+    height: 200px;
+}
+
+.insight-window {
+    border: 2px black solid;
+    height: 150px;
+}
+
+.btn-circle {
+  width: 120px;
+  height: 120px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 18px;
+  line-height: 1.428571429;
+  border-radius: 50%;
+}
+
+.dashboard-add-btn {
+    position: absolute;
+    left: ;
+    bottom: 80px;
+    width: 100%;
+    overflow:hidden;
+    color: #eeeeee;
+    font-size: 12px;
 }
 
 footer {
     position: absolute;
     padding-top: 10px;
-    left: 0;
-    bottom: 0;
+    left: 0px;
+    bottom: 0px;
     height: 60px;
     width: 100%;
     overflow:hidden;
     color: #eeeeee;
     background-color: gray;
     font-size: 12px;
-    font-family: 
 }
