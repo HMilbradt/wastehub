@@ -4,6 +4,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8"> 
         <title>Your Dashboard</title>
+        <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+        <script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
+        <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+        <script type='text/javascript' src='javascript/firebase-database-init.js'></script>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!-- Latest compiled and minified CSS -->
@@ -30,31 +34,21 @@
                 </div>
             </div>
         </div>
+
         <!-- The overlay -->
         <div id="myNav" class="overlay">
-          <!-- Button to close the overlay navigation -->
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <!-- Overlay content -->
-          <div class="overlay-content">
-            <a href="#">Apples</a>
-            <a href="#">Bananas</a>
-            <a href="#">Go Fuck Yourself</a>
-            <a href="#">OOOPS</a>
-          </div>
+            <!-- Button to close the overlay navigation -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <!-- Overlay content -->
+            <div class="overlay-content">
+                <a onclick='quickadd()'>Apples</a>
+                <a href="#">Bananas</a>
+                <a href="#">Go Fuck Yourself</a>
+                <a href="#">OOOPS</a>
+            </div>
         </div>
-        <script>
-        
-            /* Open when someone clicks on the span element */
-            function openNav() {
-                document.getElementById("myNav").style.height = "100%";
-                document.getElementById("myNav").style.height = "100%";
-            }
-
-            /* Close when someone clicks on the "x" symbol inside the overlay */
-            function closeNav() {
-                document.getElementById("myNav").style.height = "0%";
-            }
-        </script>
+        <script type='text/javascript' src='javascript/firebase-database-quickadd.js'></script>
+        <script type='text/javascript' src='javascript/add-overlay.js'></script>
         <footer class='mid'>
             <p>WasteHub</p>
             <p>All Rights Reserved &copy</p>
