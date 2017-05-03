@@ -6,6 +6,3 @@ var config = {
     storageBucket: "wastehub-55a96.appspot.com"
 };
 firebase.initializeApp(config);
-
-// Get a reference to the database service
-var database = firebase.database();
