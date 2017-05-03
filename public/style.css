@@ -1,122 +1,56 @@
-* {
-    padding: 0px;
-    margin: 0px;
+html, body div {
+    margin: 0;
+    padding: 0;
+    font-family: 'Baloo', cursive;
 }
 
-html {
+header {
+    font-size: 56px;
+    margin-top: 20px;
+}
+
+.mid {
     text-align: center;
 }
 
-body {
-    
+.logo {
+    height: 200px;
 }
 
-
-html {
-    position: relative;
-    min-height: 100%;
+.insight-window {
+    border: 2px black solid;
+    height: 150px;
 }
 
-body {
-    margin: 0 0 60px; /* bottom = footer height */
+.btn-circle {
+  width: 120px;
+  height: 120px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 18px;
+  line-height: 1.428571429;
+  border-radius: 50%;
+}
+
+.dashboard-add-btn {
+    position: absolute;
+    left: ;
+    bottom: 80px;
+    width: 100%;
+    overflow:hidden;
+    color: #eeeeee;
+    font-size: 12px;
 }
 
 footer {
     position: absolute;
     padding-top: 10px;
-    left: 0;
-    bottom: 0;
+    left: 0px;
+    bottom: 0px;
     height: 60px;
     width: 100%;
     overflow:hidden;
     color: #eeeeee;
     background-color: gray;
     font-size: 12px;
-}
-
-.form-container {
-    width: 65%;
-}
-
-.red {
-    color: red;
-}
-
-.navbar-custom {
-    background-color: gray;
-    color:#eeeeee;
-    border-radius:0;
-}
-
-.navbar-custom .navbar-nav > li > a {
-    color:#eeeeee;
-    font-size: 15px;
-}
-
-.navbar-custom .navbar-nav > .active > a {
-    color: #eeeeee;
-    background-color: transparent;
-}
-
-.navbar-custom .navbar-nav > li > a:hover,
-.navbar-custom .navbar-nav > li > a:focus,
-.navbar-custom .navbar-nav > .active > a:hover,
-.navbar-custom .navbar-nav > .active > a:focus,
-.navbar-custom .navbar-nav > .open >a {
-    text-decoration: none;
-    color: #eeeeee;
-    background: rgba(0,0,0,0.6);
-}
-
-.navbar-custom .navbar-brand {
-    color:#eeeeee;
-    font-size: 24px;
-}
-.navbar-custom .navbar-toggle {
-    background-color:#eeeeee;
-}
-.navbar-custom .icon-bar {
-    background-color: darkgray;
-}
-
-button {
-	font-family: 'Oswald', sans-serif;	
-	font-size: 1em;	
-    font-weight: 400;
-	border: 0;
-	padding: 0.25em 0.25em;
-    margin: 1.0em;
-	width: 20%;
-    background: rgba(0,0,0,0.1);  
-    -webkit-transition:.2s;  
-}
-
-.button_group{
-    float: center;
-  width: 100%;
-  display: table;
-}
-button:nth-child(2){
-	margin: 1em;
-}
-button:hover{
-  background: rgba(0,0,0,0.3);
-}
-button:active{
-  background: rgba(0,0,0,0.5);
-}
-
-#counter{
-  font-size: 1em;
-  text-align: center;
-  width: 20%;
-  display block;
-  background: rgba(0,0,0,0.1);
-  padding: 0.25em 0.25em;
-  margin: 10px 0px 0px 150px;
-    
-}
-.panel-default {
-    display: block;
-    width: 25%;
 }
