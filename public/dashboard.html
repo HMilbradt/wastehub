@@ -26,15 +26,38 @@
             <div class='container-fluid'>
             <div class='row'>
                 <div class='col-xs-12 mid dashboard-add-btn'>
-                    <button class='btn btn-success btn-circle'>Add Waste</button>
+                    <button class='btn btn-success btn-circle' onclick='openNav()'>Add Waste</button>
                 </div>
             </div>
         </div>
-        <footer>
-            <center>
-                <p>WasteHub</p>
-                <p>All Rights Reserved &copy</p>
-            </center> 
+        <!-- The overlay -->
+        <div id="myNav" class="overlay">
+          <!-- Button to close the overlay navigation -->
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <!-- Overlay content -->
+          <div class="overlay-content">
+            <a href="#">Apples</a>
+            <a href="#">Bananas</a>
+            <a href="#">Go Fuck Yourself</a>
+            <a href="#">OOOPS</a>
+          </div>
+        </div>
+        <script>
+        
+            /* Open when someone clicks on the span element */
+            function openNav() {
+                document.getElementById("myNav").style.height = "100%";
+                document.getElementById("myNav").style.height = "100%";
+            }
+
+            /* Close when someone clicks on the "x" symbol inside the overlay */
+            function closeNav() {
+                document.getElementById("myNav").style.height = "0%";
+            }
+        </script>
+        <footer class='mid'>
+            <p>WasteHub</p>
+            <p>All Rights Reserved &copy</p>
         </footer>
     </body>
 </html>
