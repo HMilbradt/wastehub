@@ -24,7 +24,7 @@ ol {
 }
 
 .logo {
-    height: 200px;
+    height: 350px;
 }
 
 .insight-window {
@@ -42,7 +42,6 @@ ol {
 }
 
 .login-auth-container {
-    bottom: 10px;
 }
 
 .dashboard-add-btn {
@@ -87,7 +86,6 @@ ol {
 /* The Overlay (background) */
 
 .overlay {
-    /* Height & width depends on how you want to reveal the overlay (see JS below) */
     height: 0;
     width: 100%;
     position: fixed;
@@ -103,7 +101,7 @@ ol {
     overflow-y: hidden;
     /* Disable horizontal scroll */
     transition: 0.5s;
-    /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+    /* 0.5 second transition effect to slide in or slide down the overlay  */
 }
 
 
