@@ -1,5 +1,6 @@
 html,
-body, div {
+body,
+div {
     margin: 0;
     padding: 0;
     font-family: 'Baloo', cursive;
@@ -32,9 +33,13 @@ header {
     border-radius: 20px;
 }
 
+.login-auth-container {
+    bottom: 10px;
+}
+
 .dashboard-add-btn {
     position: absolute;
-    left: ;
+    left: 0;
     bottom: 100px;
     width: 100%;
     overflow: hidden;
@@ -42,9 +47,10 @@ header {
     font-size: 12px;
 }
 
-footer {
+.home-footer {
     position: absolute;
     padding-top: 8px;
+    padding: 5px;
     left: 0px;
     bottom: 0px;
     width: 100%;
@@ -151,4 +157,13 @@ footer {
         top: 15px;
         right: 35px;
     }
+}
+
+a {
+    color: #eeeeee;
+}
+
+a:hover,
+a:focus {
+    color: #aaaaaa;
 }
