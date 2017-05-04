@@ -15,10 +15,31 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous" async></script>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet" />
+     <script type='text/javascript' src='javascript/firebase-database-quickadd.js'></script>
+    <script type='text/javascript' src='javascript/add-overlay.js'></script>
+    <script type='text/javascript' src='javascript/hideButton.js'></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    
+    <script>
+    
+        function hide() {
+            var fruitbtn = document.getElementById("frbtn");
+            var hiddenStuff = document.getElementsByClassName('dropdown-content');
+            
+            for(var i = 0; i != hiddenStuff.length; i++) {
+                  if(fruitbtn.click) {
+                      hiddenStuff[i].style.display= "block";
+                      fruitbtn.style.display="block";
+                  }
+            }
+        }
+
+    </script>
+    
+
     <script type='text/javascript' src='javascript/dashboard-functions.js' async></script>
     <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js' async></script>
     <title>Your Dashboard</title>
-</head>
 <body onload='checkState()'>
     <header>
         <div class='mid'>DashBoard</div>
@@ -47,26 +68,39 @@
         </div>
     </div>
     <!-- The overlay -->
-    <div id="myNav" class="overlay">
+  <div id="myNav" class="overlay">
         <!-- Button to close the overlay navigation -->
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <!-- Overlay content -->
-        <div class="overlay-content">
-            <a href="#">Apples</a>
-            <a href="#">Bananas</a>
-            <a href="#">Go Fuck Yourself</a>
-            <a href="#">OOOPS</a>
+      
+      
+        <div class="overlay-content"> 
+            <button id="frbtn" class="dropbtn btn-circle overlay-icon" onclick='hide()'>Fruits</button>
+            
+            <div id="myDropdown" class="dropdown-content">
+                <div class="row">
+                    
+                        <div class="col span_1_of_3">
+                            <div class="product">
+                                <button class="dropbtn btn-circle overlay-icon">Apple</button>
+                            </div>
+                        </div>
+                        <div class="col span_1_of_3">
+                            <div class="product">
+                                <button class="dropbtn btn-circle overlay-icon">Banana</button>
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+
         </div>
     </div>
-    <script type='text/javascript' src='javascript/add-overlay.js'></script>
-    <footer class='home-footer'>
-        <div class='container'>
-            <div class='row mid'>
-                <div class='col-xs-4 footer-btn'><a href='#'>Get Started</a></div>
-                <div class='col-xs-4 footer-btn'><a href='faq.html'>Zero Food Waste</a></div>
-                <div class='col-xs-4 footer-btn'><a href='#'>About Us</a></div>
-            </div>
-        </div>
+    
+    
+    <footer class='mid'>
+        <p>WasteHub</p>
+        <p>All Rights Reserved &copy</p>
     </footer>
 </body>
 </html>
