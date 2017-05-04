@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
@@ -20,6 +21,7 @@
     <!-- JQuery library -->
     <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet" />
 </head>
+
 <body>
     <script>
         // Redirect user if already logged in
@@ -30,18 +32,25 @@
                 console.log('User not logged in');
             }
         });
+
     </script>
     <header>
         <div class='mid'>WasteHub</div>
     </header>
     <div class='mid logo'>Image goes here...</div>
     <div id='firebaseui-auth-container'></div>
-    <script>
-        $(function() {
-            $("footer").load("footer.html")
-        });
-    </script>
-    <footer></footer>
+    <footer>
+        <div class='container'>
+            <div class='row mid'>
+                <div>New to Zero Food Waste?</div>
+            </div>
+            <div class='row mid'>
+                <div class='btn mid btn-footer'>Get Started!</div>
+            </div>
+            <div class='row mid'>
+                <div>WasteHub Copyright 2017 &copy</div>
+            </div>
+        </div>
+    </footer>
 </body>
-
 </html>
