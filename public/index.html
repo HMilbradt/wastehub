@@ -11,6 +11,8 @@
     <script src="https://cdn.firebase.com/libs/firebaseui/1.0.1/firebaseui.js"></script>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/1.0.1/firebaseui.css" />
     <script type="text/javascript" src='javascript/firebase-auth-config.js'></script>
+    <!-- User validation Scripts -->
+    <script type='text/javascript' src='javascript/userValidation.js'></script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Latest compiled and minified CSS -->
@@ -21,19 +23,7 @@
     <!-- JQuery library -->
     <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet" />
 </head>
-
-<body>
-    <script>
-        // Redirect user if already logged in
-        firebase.auth().onAuthStateChanged(function(user) {
-            if (user) {
-                window.location.replace("dashboard.html");
-            } else {
-                console.log('User not logged in');
-            }
-        });
-
-    </script>
+<body onload='dashboardRedirect()'>
     <header>
         <div class='mid'>WasteHub</div>
     </header>
