@@ -1,63 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="utf-8"> 
-        <title>Your Dashboard</title>
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="style.css" />
-        <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet" />
-    </head>
-    <body>
-        <header>
-            <div class='mid'>DashBoard</div>
-        </header>
-        <div class='mid'>Navigation Buttons here???</div>
-        <div class='container fluid'>
-            <div class='row'>
-                <div class='insight-window mid'>Insight graphs go here?</div>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type='text/javascript' src='javascript/firebase-database-init.js'></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet" />
+    <script type='text/javascript' src='javascript/dashboard-functions.js'></script>
+    <title>Your Dashboard</title>
+</head>
+
+<body onload='checkState()'>
+    <header>
+        <div class='mid'>DashBoard</div>
+    </header>
+    <button onclick='logout()'>Logout</button>
+    <div class='container fluid'>
+        <div class='mid' id='insight-window'>
+            <script>
+                document.getElementById('insight-window').innerHTML =
+                    '<div class="row">';
+                document.getElementById('insight-window').innerHTML +=
+                    '<div class="col-xs-4">Div 1</div>';
+                document.getElementById('insight-window').innerHTML +=
+                    '<div class="col-xs-4">Div 2</div>';
+                document.getElementById('insight-window').innerHTML +=
+                    '<div class="col-xs-4">Div 3</div>';
+                document.getElementById('insight-window').innerHTML +=
+                    '</div>';
+                document.getElementById('insight-window').innerHTML +=
+                    '<div class="row">';
+                document.getElementById('insight-window').innerHTML +=
+                    '<div class="col-xs-4">Div 1</div>';
+                document.getElementById('insight-window').innerHTML +=
+                    '<div class="col-xs-4">Div 2</div>';
+                document.getElementById('insight-window').innerHTML +=
+                    '<div class="col-xs-4">Div 3</div>';
+                document.getElementById('insight-window').innerHTML +=
+                    '</div>';
+                document.getElementById('insight-window').innerHTML +=
+                    '<div class="row">';
+                document.getElementById('insight-window').innerHTML +=
+                    '<div class="col-xs-4">Div 1</div>';
+                document.getElementById('insight-window').innerHTML +=
+                    '<div class="col-xs-4">Div 2</div>';
+                document.getElementById('insight-window').innerHTML +=
+                    '<div class="col-xs-4">Div 3</div>';
+                document.getElementById('insight-window').innerHTML +=
+                    '</div>';
+            </script>
+        </div>
+    </div>
+    <div class='container-fluid'>
+        <div class='row'>
+            <div class='col-xs-12 mid dashboard-add-btn'>
+                <button class='btn btn-success btn-circle' onclick='openNav()'>Add Waste</button>
             </div>
         </div>
-            <div class='container-fluid'>
-            <div class='row'>
-                <div class='col-xs-12 mid dashboard-add-btn'>
-                    <button class='btn btn-success btn-circle' onclick='openNav()'>Add Waste</button>
-                </div>
-            </div>
-        </div>
-        <!-- The overlay -->
-        <div id="myNav" class="overlay">
-          <!-- Button to close the overlay navigation -->
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <!-- Overlay content -->
-          <div class="overlay-content">
-            <a href="#">Apples</a>
+    </div>
+    <!-- The overlay -->
+    <div id="myNav" class="overlay">
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <!-- Overlay content -->
+        <div class="overlay-content">
+            <a>Apples</a>
             <a href="#">Bananas</a>
             <a href="#">Go Fuck Yourself</a>
             <a href="#">OOOPS</a>
-          </div>
         </div>
-        <script>
-        
-            /* Open when someone clicks on the span element */
-            function openNav() {
-                document.getElementById("myNav").style.height = "100%";
-                document.getElementById("myNav").style.height = "100%";
-            }
+    </div>
+    <script type='text/javascript' src='javascript/add-overlay.js'></script>
+    <footer class='mid'>
+        <p>WasteHub</p>
+        <p>All Rights Reserved &copy</p>
+    </footer>
+</body>
 
-            /* Close when someone clicks on the "x" symbol inside the overlay */
-            function closeNav() {
-                document.getElementById("myNav").style.height = "0%";
-            }
-        </script>
-        <footer class='mid'>
-            <p>WasteHub</p>
-            <p>All Rights Reserved &copy</p>
-        </footer>
-    </body>
 </html>
