@@ -5,5 +5,13 @@ function openNav() {
 
 /* Close when someone clicks on the "x" symbol inside the overlay */
 function closeNav() {
-    document.getElementById("myNav").style.height = "0%";
+	var fruitbtn = document.getElementById("frbtn");
+    var hiddenStuff = document.getElementsByClassName('fruit');
+    var resetOverlay = document.getElementsByClassName('closebtn');
+
+	fruitbtn.style.display="block";
+    for(var i = 0; i != hiddenStuff.length; i++) {          
+        hiddenStuff[i].style.display= "none";
+    }
+    
 }
