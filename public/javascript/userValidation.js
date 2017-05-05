@@ -13,7 +13,7 @@ function dashboardRedirect() {
 }
 
 function checkState() {
-    firebase.auth().onAuthStateChanged(function (user) {
+        firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
             console.log(user.uid);
         } else {
