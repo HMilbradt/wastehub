@@ -27,13 +27,18 @@
     
         function hide() {
             var fruitbtn = document.getElementById("frbtn");
-            var hiddenStuff = document.getElementsByClassName('dropdown-content');
+            var hiddenStuff = document.getElementsByClassName('row');
+            hiddenStuff.style.display="none";
+            var restart = document.getElementsByClassName("closebtn");
             
             for(var i = 0; i != hiddenStuff.length; i++) {
                   if(fruitbtn.click) {
                       hiddenStuff[i].style.display= "block";
-                      fruitbtn.style.display="block";
+                      fruitbtn.style.display="none";
                   }
+                if(restart.click) {
+                    var fruitbtn = document.getElementById("frbtn");
+                }
             }
         }
 
@@ -64,27 +69,21 @@
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <!-- Overlay content -->
       
-      
         <div class="overlay-content"> 
             <button id="frbtn" class="dropbtn btn-circle overlay-icon" onclick='hide()'>Fruits</button>
-            
-            <div id="myDropdown" class="dropdown-content">
                 <div class="row">
                     
-                        <div class="col span_1_of_3">
-                            <div class="product">
-                                <button class="dropbtn btn-circle overlay-icon">Apple</button>
-                            </div>
+                        <div class="col-xs-3">
+                            <button class="dropbtn btn-circle overlay-icon">Apple</button>
                         </div>
-                        <div class="col span_1_of_3">
-                            <div class="product">
-                                <button class="dropbtn btn-circle overlay-icon">Banana</button>
-                            </div>
+                        <div class="col-xs-3">
+                           <button class="dropbtn btn-circle overlay-icon">Banana</button>
                         </div>
-                    
+                        <div class="col-xs-3">
+                             <button class="dropbtn btn-circle overlay-icon">Oranges</button>
+                        </div>
                 </div>
             </div>
-
         </div>
     </div>
     
