@@ -81,6 +81,7 @@ footer {
 /* The navigation links inside the overlay */
 .overlay button {
     padding: 10px;
+
     text-decoration: none;
     font-size: 18px;
     color: #818181;
@@ -90,6 +91,7 @@ footer {
         1px, 1px, 5px rgba(0,0,0,0.3);
     -webkit-transition: all .2s;
     cursor:pointer;
+
 }
 
 .overlay button .box:hover {
@@ -106,6 +108,14 @@ footer {
     position: absolute;
     top: 20px;
     right: 45px;
+    font-size: 60px;
+
+}
+
+.overlay .backbtn {
+    position: absolute;
+    top: 20px;
+    left: 45px;
     font-size: 60px;
 }
 
@@ -129,7 +139,6 @@ footer {
 .overlay-icon { 
   width: 80px;
   height: 80px;
- 
   line-height: 1.428571429;
   border-radius: 36px;
 }
@@ -141,7 +150,6 @@ footer {
     cursor:pointer;
     
 }
-
 .dropbtn:hover, .dropbtn:focus{
     background-color: #ff2d54;
     margin-top: 20px;
@@ -170,4 +178,17 @@ footer {
 
 .veggie {
     display: none;
+}
+.info-content {
+    margin: 0px 20px 0px 20px;
+}
+
+.inverse-info {
+    background-color: #555555;
+    color: #eeeeee;
+}
+
+.footer-link {
+    color: #eeeeee;
+    text-decoration: none;
 }
