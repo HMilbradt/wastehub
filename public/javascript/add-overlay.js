@@ -1,5 +1,6 @@
 /* Open when someone clicks on the span element */
 function openNav() {
+
 	var fruitbtn = document.getElementById("frbtn");
     var hiddenStuff = document.getElementsByClassName('fruit');
     for(var i = 0; i != hiddenStuff.length; i++) {  
