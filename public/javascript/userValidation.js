@@ -11,3 +11,23 @@ function dashboardRedirect() {
         }
     });
 }
+
+function checkState() {
+    firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+            console.log(user.uid);
+        } else {
+            window.location.replace("index.html");
+        }
+    });
+}
+
+function logout() {
+
+    firebase.auth().signOut().then(function () {
+        console.log('Signed Out');
+        window.location.replace("index.html");
+    }, function (error) {
+        console.error('Sign Out Error', error);
+    });
+}
