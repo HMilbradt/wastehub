@@ -199,3 +199,12 @@ ol {
 .fruit {
     display: none;
 }
+
+.info-content {
+    margin: 0px 20px 0px 20px;
+}
+
+.inverse-info {
+    background-color: #555555;
+    color: #eeeeee;
+}
