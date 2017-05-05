@@ -208,3 +208,8 @@ ol {
     background-color: #555555;
     color: #eeeeee;
 }
+
+.footer-link {
+    color: #eeeeee;
+    text-decoration: none;
+}
