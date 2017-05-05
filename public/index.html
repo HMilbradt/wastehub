@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title>WasteHub</title>
+    <link rel="icon" href="images/flavicon.ico" type="image/x-icon" />
     <!-- Scripts to initialize and configure Firebase -->
     <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
     <script type='text/javascript' src='javascript/firebase-init.js'></script>
@@ -23,22 +24,27 @@
     <!-- JQuery library -->
     <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet" />
 </head>
+
 <body onload='dashboardRedirect()'>
     <header>
         <div class='mid'>WasteHub</div>
     </header>
-    <div class='mid logo'>Image goes here...</div>
+    <div class='mid logo'>
+    </div>
     <div class='login-auth-container'>
-        <div id='firebaseui-auth-container'></div>
+        <div>
+            <div id='firebaseui-auth-container'></div>
+        </div>
     </div>
     <footer class='home-footer'>
         <div class='container'>
             <div class='row mid'>
                 <div class='col-xs-4 footer-btn'><a href='#'>Get Started</a></div>
-                <div class='col-xs-4 footer-btn'><a href='faq.html'>Zero Food Waste</a></div>
+                <div class='col-xs-4 footer-btn'><a href='FAQ.html'>Zero Food Waste</a></div>
                 <div class='col-xs-4 footer-btn'><a href='#'>About Us</a></div>
             </div>
         </div>
     </footer>
 </body>
+
 </html>
