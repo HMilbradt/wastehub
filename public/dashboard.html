@@ -17,34 +17,21 @@
     <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet" />
      <script type='text/javascript' src='javascript/firebase-database-quickadd.js'></script>
     <script type='text/javascript' src='javascript/add-overlay.js'></script>
+    
+    <script type='text/javascript' src='javascript/add-overlay-buttonfunction-fruit.js'></script>
+    
+    
     <script type='text/javascript' src='javascript/hideButton.js'></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    
-    <script>
-    
-        function hide() {
-            var fruitbtn = document.getElementById("frbtn");
-            var hiddenStuff = document.getElementsByClassName('dropdown-content');
-            
-            for(var i = 0; i != hiddenStuff.length; i++) {
-                  if(fruitbtn.click) {
-                      hiddenStuff[i].style.display= "block";
-                      fruitbtn.style.display="block";
-                  }
-            }
-        }
-
-    </script>
-    
-
     <script type='text/javascript' src='javascript/dashboard-functions.js' async></script>
     <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js' async></script>
-    <title>Your Dashboard</title>
+    </head>
+<title>Your Dashboard</title>
 <body onload='checkState()'>
     <header>
         <div class='mid'>DashBoard</div>
     </header>
-    <button onclick='logout()'>Logout</button>
+    
     
     <nav class="text-center">
         <div>    
@@ -52,6 +39,7 @@
             <button type="button">History</button>
             <button type="button">Water</button>
             <button type="button">Calories</button>
+            <button onclick='logout()'>Logout</button>
         </div>
     </nav>
 
@@ -67,37 +55,70 @@
             </div>
         </div>
     </div>
-    <!-- The overlay -->
+  <!-- The overlay -->
   <div id="myNav" class="overlay">
-        <!-- Button to close the overlay navigation -->
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <!-- Overlay content -->
-      
-      
-        <div class="overlay-content"> 
-            <button id="frbtn" class="dropbtn btn-circle overlay-icon" onclick='hide()'>Fruits</button>
-            
-            <div id="myDropdown" class="dropdown-content">
-                <div class="row">
-                    
-                        <div class="col span_1_of_3">
-                            <div class="product">
-                                <button class="dropbtn btn-circle overlay-icon">Apple</button>
-                            </div>
-                        </div>
-                        <div class="col span_1_of_3">
-                            <div class="product">
-                                <button class="dropbtn btn-circle overlay-icon">Banana</button>
-                            </div>
-                        </div>
-                    
-                </div>
-            </div>
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
+    <!--back button-->
+    <a href="javascript:void(0)" class="backbtn" onclick="returnPage()">&#8678;</a>
+    <!-- Overlay content -->
+
+    <!--Fruits-->  
+    <div class="overlay-content"> 
+        <button id="frbtn" class="overlay-icon dropbtn" onclick='hide()'>Fruits</button>
+            <div class="row">  
+                <div class="col-xs-3 fruit">
+                    <button class="dropbtn overlay-icon">Apple</button>
+                </div>
+                <div class="col-xs-3 fruit">
+                   <button class="dropbtn overlay-icon">Banana</button>
+                </div>
+                <div class="col-xs-3 fruit">
+                     <button class="dropbtn overlay-icon">Oranges</button>
+                </div>  
+            </div>
+        </br>
+            <div class="row">
+                    <div class="col-xs-3 fruit">
+                        <button class="dropbtn overlay-icon">Pear</button>
+                    </div>
+                    <div class="col-xs-3 fruit">
+                       <button class="dropbtn overlay-icon">Melon</button>
+                    </div>
+                    <div class="col-xs-3 fruit">
+                         <button class="dropbtn overlay-icon">Plum</button>
+                    </div>
+                </div>
+        </br>
+            <div class="row">
+                    <div class="col-xs-3 fruit">
+                        <button class="dropbtn overlay-icon">Cherry</button>
+                    </div>
+                    <div class="col-xs-3 fruit">
+                       <button class="dropbtn overlay-icon">Water&#13;&#10;melon</button>
+                    </div>
+                    <div class="col-xs-3 fruit">
+                         <button class="dropbtn overlay-icon">Peach</button>
+                    </div>
+                </div>
+        </br>
+            <div class="row">
+                    <div class="col-xs-3 fruit">
+                        <button class="dropbtn overlay-icon">Straw&#13;&#10;berry</button>
+                    </div>
+                    <div class="col-xs-3 fruit">
+                       <button class="dropbtn overlay-icon">Grape</button>
+                    </div>
+                    <div class="col-xs-3 fruit">
+                         <button class="dropbtn overlay-icon">Ras&#13;&#10;berry</button>
+                    </div>
+                </div>
+        <button id="vegbtn" class="dropbtn  overlay-icon" onclick='#'>Veggies</button>
+       
         </div>
     </div>
-    
-    
+   
     <footer class='mid'>
         <p>WasteHub</p>
         <p>All Rights Reserved &copy</p>
