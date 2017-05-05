@@ -25,7 +25,7 @@
     <title>Your Dashboard</title>
 </head>
 
-<body onload='checkState()'>
+<body>
     <header>
         <div class='mid'>DashBoard</div>
     </header>
@@ -63,13 +63,13 @@
                 <div class="row">
          
                     <div class="col-xs-3 fruit">
-                        <button class="dropbtn overlay-icon">Apple</button>
+                        <button class="dropbtn overlay-icon" onclick="writeData('apple')">Apple</button>
                     </div>
                     <div class="col-xs-3 fruit">
-                       <button class="dropbtn overlay-icon">Banana</button>
+                       <button class="dropbtn overlay-icon" onclick="writeData('banana')">Banana</button>
                     </div>
                     <div class="col-xs-3 fruit">
-                         <button class="dropbtn overlay-icon">Oranges</button>
+                         <button class="dropbtn overlay-icon" onclick="writeData('oranges')">Oranges</button>
                     </div>
                 </div>
             <br />
