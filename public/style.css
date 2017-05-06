@@ -23,13 +23,13 @@ header {
 }
 
 .btn-circle {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 50px;
   text-align: center;
   padding: 6px 0;
   font-size: 18px;
   line-height: 1.428571429;
-  border-radius: 50%;
+  border-radius: 30px;
 }
 
 .dashboard-add-btn {
@@ -44,8 +44,8 @@ header {
 footer {
     position: absolute;
     padding-top: 10px;
-    left: 0px;
-    bottom: 0px;
+    left: 0;
+    bottom: 0;
     height: 40px;
     width: 100%;
     overflow:hidden;
@@ -180,7 +180,7 @@ footer {
     display: none;
 }
 .info-content {
-    margin: 0px 20px 0px 20px;
+    margin: 0 20px 0 20px;
 }
 
 .inverse-info {
@@ -191,4 +191,8 @@ footer {
 .footer-link {
     color: #eeeeee;
     text-decoration: none;
+}
+
+canvas {
+    max-width: 500px;
 }
