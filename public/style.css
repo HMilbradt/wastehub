@@ -131,8 +131,8 @@ footer {
 @media screen and (max-height: 750px) {
     .overlay btn {font-size: 20px}
     .overlay .closebtn {
-        font-size: 40px;
-        top: 15px;     
+        font-size: 60px;
+        top: 20px;     
     }
     
      .overlay #frbtn{
