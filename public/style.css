@@ -1,7 +1,7 @@
 html, body div {
     margin: 0;
     padding: 0;
-    font-family: 'Baloo', cursive;
+    font-family: 'Baloo', sans-serif;
 }
 
 header {
@@ -23,13 +23,13 @@ header {
 }
 
 .btn-circle {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 50px;
   text-align: center;
   padding: 6px 0;
   font-size: 18px;
   line-height: 1.428571429;
-  border-radius: 50%;
+  border-radius: 30px;
 }
 
 .dashboard-add-btn {
@@ -44,8 +44,8 @@ header {
 footer {
     position: absolute;
     padding-top: 10px;
-    left: 0px;
-    bottom: 0px;
+    left: 0;
+    bottom: 0;
     height: 40px;
     width: 100%;
     overflow:hidden;
@@ -197,10 +197,11 @@ footer {
     display: none;
 }
 .info-content {
-    margin: 0px 20px 0px 20px;
+    padding: 0 100px 0;
 }
 
 .inverse-info {
+    padding: 0 100px 0;
     background-color: #555555;
     color: #eeeeee;
 }
@@ -209,6 +210,7 @@ footer {
     color: #eeeeee;
     text-decoration: none;
 }
+
 
 #frbtn {
   margin-left: 620px;
@@ -220,4 +222,8 @@ footer {
 
 .col-xs-3 {
     margin-left: 120px;
+
+canvas {
+    max-width: 500px;
+
 }
