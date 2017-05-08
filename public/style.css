@@ -71,10 +71,11 @@ footer {
 
 /* Position the content inside the overlay */
 .overlay-content {
-    top: 25%; /* 25% from the top */
+    top: 15%; /* 25% from the top */
     width: 100%; /* 100% width */
     margin-top: 100px; /* 30px top margin to avoid conflict with the close button on smaller screens */
     margin-left: 50px;
+    position: absolute;
     
 }
 
@@ -126,15 +127,35 @@ footer {
     font-size: 60px;
 }
 
-/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-@media screen and (max-height: 450px) {
+/* When the height of the screen is less than 750 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 750px) {
     .overlay btn {font-size: 20px}
     .overlay .closebtn {
-        font-size: 40px;
-        top: 15px;
-        right: 35px;
+        font-size: 60px;
+        top: 20px;     
+    }
+    
+     .overlay #frbtn{
+      margin-left: 28%;
+    }
+    
+    .overlay #vegbtn {
+        margin-left: 28%;
+    }
+    .overlay .col-xs-3 {
+        margin-left: 0%;
+    }
+    
+    .veggie-container {
+       margin-top: -70px
+       
+    }
+    
+    .fruit-container {
+        margin-top: -50px;
     }
 }
+
 
 .overlay-icon { 
   width: 80px;
@@ -164,10 +185,6 @@ footer {
 	float:left;
 }
 
-.span_1_of_3{
-  width: 50%;
-}
-
 .hidden {
     display: none;
 }
@@ -194,6 +211,19 @@ footer {
     text-decoration: none;
 }
 
+
+#frbtn {
+  margin-left: 620px;
+}
+
+#vegbtn {
+    margin-left: 620px;
+}
+
+.col-xs-3 {
+    margin-left: 120px;
+
 canvas {
     max-width: 500px;
+
 }
