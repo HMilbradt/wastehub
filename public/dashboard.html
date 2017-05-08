@@ -93,23 +93,24 @@
 <!-- Overlay content -->
 
 <!--Fruits-->  
-    <div class="overlay-content"> 
+    <div class="overlay-content container-fluid"> 
         <div class="row">
             <div class="col-xs-12">
                 <button id="frbtn" class="overlay-icon dropbtn" >Fruits</button>
-                    <div class="row">  
-                        <div class="col-xs-3 fruit">
-                            <button class="dropbtn overlay-icon">Apple</button>
+                    <div class="fruit-container">
+                        <div class="row">  
+                            <div id="single-fruit" class="col-xs-3 fruit">
+                                <button class="dropbtn overlay-icon">Apple</button>
+                            </div>
+                            <div id="single-fruit" class="col-xs-3 fruit">
+                               <button class="dropbtn overlay-icon">Banana</button>
+                            </div>
+                            <div id="single-fruit" class="col-xs-3 fruit">
+                                 <button class="dropbtn overlay-icon">Orange</button>
+                            </div>  
                         </div>
-                        <div class="col-xs-3 fruit">
-                           <button class="dropbtn overlay-icon">Banana</button>
-                        </div>
-                        <div class="col-xs-3 fruit">
-                             <button class="dropbtn overlay-icon">Orange</button>
-                        </div>  
-                    </div>
-                <br />
-                    <div class="row">
+                    <br />
+                        <div class="row">
                             <div class="col-xs-3 fruit">
                                 <button class="dropbtn overlay-icon">Pear</button>
                             </div>
@@ -120,8 +121,8 @@
                                  <button class="dropbtn overlay-icon">Plum</button>
                             </div>
                         </div>
-                <br />
-                    <div class="row">
+                    <br />
+                        <div class="row">
                             <div class="col-xs-3 fruit">
                                 <button class="dropbtn overlay-icon">Cherry</button>
                             </div>
@@ -132,8 +133,8 @@
                                  <button class="dropbtn overlay-icon">Peach</button>
                             </div>
                         </div>
-                <br />
-                    <div class="row">
+                    <br />
+                        <div class="row">
                             <div class="col-xs-3 fruit">
                                 <button class="dropbtn overlay-icon">Straw&#13;&#10;berry</button>
                             </div>
@@ -144,9 +145,11 @@
                                  <button class="dropbtn overlay-icon">Ras&#13;&#10;berry</button>
                             </div>
                         </div>
+                </div>
             </div>
             <div class="col-xs-12">
                 <button id="vegbtn" class="dropbtn overlay-icon">Veggies</button>
+                <div class="veggie-container">
                     <div class="row">
                         <div class="col-xs-3 veggie">
                             <button class="dropbtn overlay-icon">Carrot</button>
@@ -194,6 +197,7 @@
                              <button class="dropbtn overlay-icon">Tomato</button>
                         </div>
                     </div>
+                </div>
             </div>
         </div>  
     </div>

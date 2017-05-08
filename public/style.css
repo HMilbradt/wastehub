@@ -71,7 +71,7 @@ footer {
 
 /* Position the content inside the overlay */
 .overlay-content {
-    top: 25%; /* 25% from the top */
+    top: 15%; /* 25% from the top */
     width: 100%; /* 100% width */
     margin-top: 100px; /* 30px top margin to avoid conflict with the close button on smaller screens */
     margin-left: 50px;
@@ -135,20 +135,24 @@ footer {
         top: 15px;     
     }
     
-    .overlay {
-        width: 100%;
-        margin-right: 40px;
+     .overlay #frbtn{
+      margin-left: 28%;
     }
-    #frbtn {
-        margin-right: 50px;
-        background-color: aqua;
+    
+    .overlay #vegbtn {
+        margin-left: 28%;
+    }
+    .overlay .col-xs-3 {
+        margin-left: 0%;
+    }
+    
+    .veggie-container {
+       margin-top: -70px
        
     }
-    #vegbtn {
-        
-    }
-    .col-xs-12 {
-       
+    
+    .fruit-container {
+        margin-top: -50px;
     }
 }
 
