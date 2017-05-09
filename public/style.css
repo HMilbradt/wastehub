@@ -124,6 +124,7 @@ footer {
     font-size: 60px;
 }
 
+
 .overlay-icon { 
   width: 100px;
   height: 100px;
@@ -191,7 +192,9 @@ footer {
 }
 
 .col-xs-3 {
+
     margin-left: 5%;
+
 }
 
 #chart {
@@ -262,6 +265,7 @@ footer {
       border-radius: 30px;
         
     }
+
     
     .navbar-inverse{
       width: 100%;
@@ -421,3 +425,4 @@ footer {
 }
 
 }
+

@@ -1,0 +1,4 @@
+Controller can send commands to the model to update the model's state (e.g., editing a document). 
+It can also send commands to its associated view to change the view's presentation of the model (e.g., scrolling through a document).
+
+FUNCTIONS THAT MANIPULATE DATA

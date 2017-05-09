@@ -1,0 +1,3 @@
+View generates new output to the user based on changes in the model.
+
+FUNCTIONS THAT ALTER USER VIEW OF DATA.
