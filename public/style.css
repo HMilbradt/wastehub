@@ -11,6 +11,7 @@ header {
 
 .mid {
     text-align: center;
+    
 }
 
 .logo {
@@ -30,21 +31,18 @@ header {
   font-size: 18px;
   line-height: 1.428571429;
   border-radius: 30px;
+  position: relative;
 }
 
 .dashboard-add-btn {
-    position: absolute;
-    bottom: 80px;
     width: 100%;
     overflow:hidden;
     color: #eeeeee;
     font-size: 5px;
-    margin-top:20%;
-    margin-left: -18%
 }
 
 footer {
-    position: absolute;
+    position: fixed;
     padding-top: 10px;
     left: 0;
     bottom: 0;
@@ -53,7 +51,7 @@ footer {
     overflow:hidden;
     color: #eeeeee;
     background-color: gray;
-    font-size: 12px;
+    font-size: 16px;
 }
 
 /* The Overlay (background) */
@@ -111,7 +109,6 @@ footer {
     top: 20px;
     right: 45px;
     font-size: 60px;
-
 }
 
 .overlay .backbtn {
@@ -167,6 +164,7 @@ footer {
 .veggie {
     display: none;
 }
+
 .info-content {
     padding: 0 100px 0;
 }
@@ -180,6 +178,7 @@ footer {
 .footer-link {
     color: #eeeeee;
     text-decoration: none;
+    position: fixed;
 }
 
 #frbtn {
@@ -198,10 +197,13 @@ footer {
     max-height: 700px;
     max-width: 700px;
     margin: auto;
+    margin-top: 10%;
 }
 
 .navbar-inverse{
   width: 100%;
+  position: fixed;  
+  font-size: 24px;    
 }
 
 
