@@ -1,7 +1,7 @@
 html, body div {
     margin: 0;
     padding: 0;
-    font-family: 'Baloo', cursive;
+    font-family: 'Baloo', sans-serif;
 }
 
 header {
@@ -23,13 +23,13 @@ header {
 }
 
 .btn-circle {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 50px;
   text-align: center;
   padding: 6px 0;
   font-size: 18px;
   line-height: 1.428571429;
-  border-radius: 50%;
+  border-radius: 30px;
 }
 
 .dashboard-add-btn {
@@ -39,13 +39,15 @@ header {
     overflow:hidden;
     color: #eeeeee;
     font-size: 5px;
+    margin-top:20%;
+    margin-left: -18%
 }
 
 footer {
     position: absolute;
     padding-top: 10px;
-    left: 0px;
-    bottom: 0px;
+    left: 0;
+    bottom: 0;
     height: 40px;
     width: 100%;
     overflow:hidden;
@@ -71,17 +73,17 @@ footer {
 
 /* Position the content inside the overlay */
 .overlay-content {
-    top: 25%; /* 25% from the top */
+    top: 15%; /* 25% from the top */
     width: 100%; /* 100% width */
     margin-top: 100px; /* 30px top margin to avoid conflict with the close button on smaller screens */
     margin-left: 50px;
+    position: absolute;
     
 }
 
 /* The navigation links inside the overlay */
 .overlay button {
     padding: 10px;
-
     text-decoration: none;
     font-size: 18px;
     color: #818181;
@@ -91,13 +93,13 @@ footer {
         1px, 1px, 5px rgba(0,0,0,0.3);
     -webkit-transition: all .2s;
     cursor:pointer;
-
 }
 
 .overlay button .box:hover {
     background: #333;
     color:#e3e3e3;
 }
+
 /* When you mouse over the navigation links, change their color */
 .overlay button:hover, .overlay button:focus {
     color: #f1f1f1;
@@ -126,16 +128,6 @@ footer {
     font-size: 60px;
 }
 
-/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-@media screen and (max-height: 450px) {
-    .overlay btn {font-size: 20px}
-    .overlay .closebtn {
-        font-size: 40px;
-        top: 15px;
-        right: 35px;
-    }
-}
-
 .overlay-icon { 
   width: 80px;
   height: 80px;
@@ -147,9 +139,9 @@ footer {
     box-shadow: 0px 0px 2px rgba(0,0,0,0.5),
         1px, 1px, 5px rgba(0,0,0,0.3);
     -webkit-transition: all .2s;
-    cursor:pointer;
-    
+    cursor:pointer; 
 }
+
 .dropbtn:hover, .dropbtn:focus{
     background-color: #ff2d54;
     margin-top: 20px;
@@ -164,10 +156,6 @@ footer {
 	float:left;
 }
 
-.span_1_of_3{
-  width: 50%;
-}
-
 .hidden {
     display: none;
 }
@@ -180,10 +168,11 @@ footer {
     display: none;
 }
 .info-content {
-    margin: 0px 20px 0px 20px;
+    padding: 0 100px 0;
 }
 
 .inverse-info {
+    padding: 0 100px 0;
     background-color: #555555;
     color: #eeeeee;
 }
@@ -191,4 +180,72 @@ footer {
 .footer-link {
     color: #eeeeee;
     text-decoration: none;
+}
+
+#frbtn {
+  margin-left: 620px;
+}
+
+#vegbtn {
+    margin-left: 620px;
+}
+
+.col-xs-3 {
+    margin-left: 120px;
+}
+
+#chart {
+    max-height: 700px;
+    max-width: 700px;
+    margin: auto;
+}
+
+.navbar-inverse{
+  width: 100%;
+}
+
+
+/* When the height of the screen is less than 750 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 750px) {
+    .overlay btn {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 60px;
+        top: 20px;     
+    }
+    
+     .overlay #frbtn{
+      margin-left: 28%;
+    }
+    
+    .overlay #vegbtn {
+        margin-left: 28%;
+    }
+    .overlay .col-xs-3 {
+        margin-left: 0%;
+    }
+    
+    .veggie-container {
+       margin-top: -70px
+       
+    }
+    
+    .fruit-container {
+        margin-top: -50px;
+    }
+    
+    .dashboard-add-btn {
+    position: absolute;
+    bottom: 80px;
+    width: 100%;
+    overflow:hidden;
+    color: #eeeeee;
+    font-size: 5px;
+    margin-left:30%;
+    }
+    
+    #chart {
+    max-height: 500px;
+    max-width: 500px;
+    margin: auto;
+    }
 }
