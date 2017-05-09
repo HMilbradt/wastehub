@@ -56,3 +56,9 @@
 .top a:focus {
     color: #bbbbbb;
 }
+
+/* List Styles */
+.quickJumpMenu a, a:visited{
+    font-size: 30px;
+    color: darkslategrey;
+}
