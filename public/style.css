@@ -235,8 +235,6 @@ footer {
     .fruit-container {
         margin-top: 10%;
         padding-top: 10%
-        
-
     }
     
     .dashboard-add-btn {
@@ -332,18 +330,17 @@ footer {
     color: #f1f1f1;
 }
 
-/* Position the close button (top right corner) */
 .overlay .closebtn {
     position: absolute;
-    top: 5%;
-    right: 10%;
+    top: 20px;
+    right: 45px;
     font-size: 60px;
 }
 
 .overlay .backbtn {
     position: absolute;
-    top: 5%;
-    left: 10%;
+    top: 20px;
+    left: 45px;
     font-size: 60px;
 }
 
@@ -381,9 +378,7 @@ footer {
 }
 
 .fruit {
-    display: none;
-   
-      
+    display: none;  
 }
 
 .veggie {
@@ -408,17 +403,21 @@ footer {
 }
 
 #frbtn {
-  margin-top: 30%;
-  margin-left: 5%;
+  margin-top: 40%;
+  
 }
 
 #vegbtn {
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 .col-xs-3 {
     margin-top: 7%
      
+}
+
+.row {
+  margin-left: 10%;
 }
 
 }
