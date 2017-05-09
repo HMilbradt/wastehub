@@ -1,0 +1,17 @@
+/* CSS supplying default styles for all pages. */
+
+html, body div {
+    margin: 0;
+    padding: 0;
+    font-family: 'Baloo', cursive;
+}
+
+header {
+    font-size: 56px;
+    margin-top: 20px;
+}
+
+.mid {
+    text-align: center;
+}
+
