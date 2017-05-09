@@ -1,0 +1,27 @@
+/* Extra styling specific to index.html */
+
+.logo {
+    padding: 20px 0 20px 0;
+}
+
+footer {
+    position: absolute;
+    padding-top: 10px;
+    left: 0;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+    overflow:hidden;
+    color: #eeeeee;
+    background-color: gray;
+    font-size: 12px;
+}
+
+a {
+    color: #eeeeee;
+    text-decoration: none;
+}
+
+a:focus {
+    color: #bbbbbb;
+}

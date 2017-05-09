@@ -1,0 +1,3 @@
+Model stores data that is retrieved according to commands from the controller and displayed in the view.
+
+FUNCTIONS THAT STORE DATA.
