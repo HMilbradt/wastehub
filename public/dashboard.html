@@ -19,8 +19,8 @@
     <script type='text/javascript' src="javascript/_LIBRARY/Chart.bundle.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet" />
     <script type="text/javascript" src="javascript/VIEW/chart-display.js"></script>
-
     <script>
+        getChartData();
         $(document).ready(function(){
             $("#frbtn").click(function(){
                 $("#vegbtn").hide();
@@ -75,7 +75,6 @@
             <div class="col-xs-12">
                 <div class='mid' id='insight-window'>
                 <canvas id="chart" width="100" height="90"></canvas>
-                    <script>displayBarChart()</script>
                 </div>
             </div>
 
@@ -92,7 +91,7 @@
   <!-- The overlay -->
 <div id="myNav" class="overlay">
 <!-- Button to close the overlay navigation -->
-<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+<a href="javascript:void(0)" class="closebtn" onclick="closeNav(); getChartData()">&times;</a>
 
 <a href="javascript:void(0)" class="backbtn" >&#8678;</a>
 <!-- Overlay content -->
@@ -106,10 +105,10 @@
                     <div class="fruit-container">
                         <div class="row">  
                             <div id="single-fruit" class="col-xs-3 fruit">
-                                <button class="dropbtn overlay-icon">Apple</button>
+                                <button class="dropbtn overlay-icon" onclick="increaseWasteCount('apple');">Apple</button>
                             </div>
                             <div id="single-fruit" class="col-xs-3 fruit">
-                               <button class="dropbtn overlay-icon">Banana</button>
+                               <button class="dropbtn overlay-icon" onclick="increaseWasteCount('banana');">Banana</button>
                             </div>
                             <div id="single-fruit" class="col-xs-3 fruit">
                                  <button class="dropbtn overlay-icon">Orange</button>

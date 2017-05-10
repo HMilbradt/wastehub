@@ -6,33 +6,63 @@
  * @param category The type of food
  * @param name The name of the food
  */
-function writeWasteItem(category, name) {
+function increaseWasteCount(name) {
 
+
+    firebase.auth().onAuthStateChanged(function (user) {
+
+
+            var database = firebase.database();
+
+            var itemRef = database.ref('users/' + user.uid + '/waste/count/').child(name);
+
+            itemRef.transaction(function(count) {
+                return (count || 0) + 1;
+            });
+            readWasteCount(name);
+    });
+}
+
+function readWasteCount(name) {
+
+    return new Promise(function(resolve, reject) {
+
+        firebase.auth().onAuthStateChanged(function (user) {
+
+            var count = firebase.database().ref("users/" + user.uid + "/waste/count/" + name);
+
+        count.once("value", function(data) {
+            if (data.val() === null) {
+                resolve(0);
+            } else {
+                resolve(data.val());
+            }
+        });
+    })
+    });
+}
+
+
+// NOT WORKING AS INTENDED
+
+
+/*
+function increaseCount(name) {
 
     firebase.auth().onAuthStateChanged(function (user) {
 
         var database = firebase.database();
 
-        var date = new Date();
-        var year = date.getFullYear();
-        var month = date.getMonth() + 1;
-        var day = date.getDate();
+        var countRef = database.ref('users/' + user.uid + '/waste/count/').child(name);
 
-        var dateAdded = year + '/' + month + '/' + day;
-
-        database.ref('users/' + user.uid + '/waste/' + category + '/').push({
-
-            name: name,
-            date: dateAdded
-        })
+        countRef.transaction(function(count) {
+            return (count || 0) + 1;
+        });
+        console.log(countRef)
     });
 }
 
-/**
- * Returns a snapshot for a particular category of food.
- *
- * @param category The type of food.
- */
+
 function readCategory(category) {
 
     firebase.auth().onAuthStateChanged(function (user) {
@@ -65,3 +95,4 @@ function readFoodItem(category, name) {
         return count;
     });
 }
+    */

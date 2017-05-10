@@ -1,17 +1,19 @@
 'use strict';
 
-function getNumApples() {
-    return new Promise(function ( resolve, reject ) {
-        readFoodItem('fruit', 'apple').then(function () {
-            displayBarChart(numApples);
-        });
+function getChartData() {
+
+    var dataOne = readWasteCount('apple');
+    var dataTwo = readWasteCount('banana');
+
+    Promise.all([dataOne, dataTwo]).then(function(values) {
+        displayBarChart(values);
+    }, function(error) {
+        console.log("Failed", error);
     })
 }
-function createChart() {
-    getNumApples().then()
-}
 
-function displayBarChart(numApples) {
+function displayBarChart(data) {
+
 
     // TODO static types, change soon
     // var numApples = readFoodItem('fruit', 'apple');
@@ -22,10 +24,10 @@ function displayBarChart(numApples) {
     var myChart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ["apple", "banana", "pear"], //"Green", "Purple", "Orange"],
+            labels: ['apple', 'banana', 'fuck'], //"Green", "Purple", "Orange"],
             datasets: [{
                 label: '# of Votes',
-                data: [numApples, 5, 5], // 5, 2, 3],
+                data: [data[0], data[1], 5], // 5, 2, 3],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
