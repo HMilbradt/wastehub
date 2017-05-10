@@ -1,9 +1,13 @@
 /* Extra styling specific to index.html */
 
+/* Image Styles */
+/**********************************************/
 .logo {
     padding: 20px 0 20px 0;
 }
 
+/* Footer Styles */
+/**********************************************/
 footer {
     position: absolute;
     padding-top: 10px;
@@ -17,6 +21,8 @@ footer {
     font-size: 12px;
 }
 
+/* Link Styles */
+/**********************************************/
 a {
     color: #eeeeee;
     text-decoration: none;
