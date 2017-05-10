@@ -11,8 +11,8 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script type="text/javascript" src="javascript/_LIBRARY/jquery-3.2.1.min.js"></script>
     <!-- Latest compiled and minified CSS -->
-    <script type="text/javascript" src="javascript/_LIBRARY/bootstrap.min.js"></script>    
-    <script type='text/javascript' src='javascript/overlay-func/add-overlay.js'></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script type="text/javascript" src="javascript/_LIBRARY/bootstrap.min.js"></script>
     <script type='text/javascript' src='javascript/VIEW/hideButton.js'></script>
     <script type='text/javascript' src='javascript/MODEL/database.js'></script>
     <script type='text/javascript' src='javascript/MODEL/userValidation.js'></script>
@@ -21,6 +21,7 @@
     <script type='text/javascript' src='javascript/Chart.bundle.min.js'></script>
     <link rel="stylesheet" href="css/master.css" />
     <link rel="stylesheet" href="css/dashboard.css" />
+    <script type='text/javascript' src='javascript/overlay-func/add-overlay.js'></script>
     <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet" />
     <title>Your Dashboard</title>
     <script>
@@ -63,7 +64,7 @@
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="#">Progress</a></li>
                 <li><a href="#">Leaders</a></li>
-                <li style="float: right;"><a href="#" onclick="logout()"><span class="glyphicon glyphicon-log-in"></span>Logout</a></li>
+                <li style="float: right;"><a href="#" onclick="logout()">Logout</a></li>
             </ul>
         </div>
     </nav>
@@ -95,7 +96,7 @@
                 <a href="javascript:void(0)" id="backbtn" >&#8678;</a>
             </div>
             <div class="col-xs-6">
-                <a href="javascript:void(0)" id="closebtn" onclick="closeNav()">&times;</a>
+                <a href="javascript:void(0)" id="closebtn" onclick="closeNav(); getChartData()">&times;</a>
             </div>
         </div>
     </div>
@@ -115,10 +116,10 @@
                 <div class="fruit-container">
                     <div class="row">
                         <div class="col-xs-4 fruit">
-                            <button class="overlay-icon">Apple</button>
+                            <button class="overlay-icon" onclick="increaseWasteCount('apple')">Apple</button>
                         </div>
                         <div class="col-xs-4 fruit">
-                           <button class="overlay-icon">Banana</button>
+                           <button class="overlay-icon" onclick="increaseWasteCount('banana')">Banana</button>
                         </div>
                         <div class="col-xs-4 fruit">
                              <button class="overlay-icon">Orange</button>
