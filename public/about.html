@@ -15,15 +15,29 @@
 </head>
 
 <body>
+    
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav nav-pills">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="#">Leaders</a></li>
+                <li style="float: right;"><a href="#" onclick="logout()">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
     <a id="TOP"></a>
     <div class='container-fluid'>
-        <a href="index.html" style="float: left">Back</a>
         <img src="images/Logo_2.png" class="logo">
     </div>
+    
+    
+    
+    <br/>
     <div class='container-fluid'>
-        <div class="row info-content">
-            <div class="col-md-3 hidden-xs hidden-sm"><img class='pic' src="images/students.jpg" alt="students"></div>
-            <div class="col-md-9">
+        <div class="row info-content" >
+            <div class="col-md-4 hidden-xs hidden-sm"><img id="stdimg" class='pic' src="images/students.jpg" alt="students"></div>
+            <div class="col-md-8">
                 <header>Who are we</header>
                 <p>
                     We are a group of students that feel very strongly about preserving our planet earth. Food waste is a growing problem that we feel everyone is capable of making an impact if given the right tools.
@@ -33,7 +47,7 @@
 
         </div>
 
-        <div class="row info-content-ALT">
+        <div class="row info-content-ALT" id="ic">
             <div class="col-md-8">
                 <header>Knowledge is Power</header>
                 <p>
@@ -46,8 +60,8 @@
         </div>
 
         <div class="row info-content">
-            <div class="col-md-5 hidden-xs hidden-sm"><img class='pic' src="images/eco.jpg" alt="students"></div>
-            <div class="col-md-7">
+            <div class="col-md-4 hidden-xs hidden-sm"><img class='pic' src="images/eco.jpg" alt="students"></div>
+            <div class="col-md-8">
                 <header>Eco-Friendly</header>
                 <p>
                     We are a group of students that feel very strongly about preserving our planet earth. Food waste is a growing problem that we feel everyone is capable of making an impact if given the right tools.
@@ -57,21 +71,27 @@
 
         </div>
 
-        <div class="row info-content-ALT">
-            <div class="col-md-9">
-                <h1>Save Money</h1>
+        <div class="row info-content-ALT" id="ic">
+            <div class="col-md-8">
+                <header>Save Money</header>
                 <p>
                     We are a group of students that feel very strongly about preserving our planet earth. Food waste is a growing problem that we feel everyone is capable of making an impact if given the right tools.
                 </p>
             </div>
-            <div class="col-md-3 hidden-xs hidden-sm"><img class='pic white' src="images/savemoney.jpg" alt="money"></div>
+            <div class="col-md-4 hidden-xs hidden-sm"><img class='pic white' src="images/savemoney.jpg" alt="money"></div>
             <div class="visible-xs visible-sm"><img class='pic white' src="images/savemoney.jpg" alt="money"></div>
 
         </div>
     </div>
-    <div class="top">
-        <a href="about.html#TOP">Back To Top</a>
-    </div>
+    <footer class='top'>
+        <div class='container-fluid'>
+            <div class='row mid'>
+                <div class='col-xs-4 footer-btn'><a href='#' class="footer-link">Home</a></div>
+                <div class='col-xs-4 footer-btn'><a href='FAQ.html' class="footer-link">FAQ</a></div>
+                <div class='col-xs-4 footer-btn'><a href='index.html' class="footer-link">Get Started</a></div>
+            </div>
+        </div>
+    </footer>
 
 
 </body>
