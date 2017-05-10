@@ -4,40 +4,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
 
+   
+     <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet" />
+    <link rel="stylesheet" href="css/master.css" />
+
+    <link rel="stylesheet" href="css/dashboard.css" />
+
     <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js" async></script>
     <script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js" async></script>
     <script type='text/javascript' src='javascript/firebase-database-init.js' async></script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="javascript/jquery-3.2.1.min.js"></script>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
     <!-- Latest compiled and minified JavaScript -->
     <script src="javascript/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous" async></script>
-    <link rel="stylesheet" href="style.css" />
-    <script type='text/javascript' src='javascript/add-overlay.js'></script>
-  
-    <script type='text/javascript' src='javascript/hideButton.js'></script>
-    <script type='text/javascript' src='javascript/dashboard-functions.js' async></script>
-    <script type='text/javascript' src='javascript/userValidation.js' async></script>
-
     <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js' async></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
     <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
     <script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
     <script type='text/javascript' src='javascript/MODEL/firebase-init.js'></script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script type="text/javascript" src="javascript/_LIBRARY/jquery-3.2.1.min.js"></script>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
-    <script type="text/javascript" src="javascript/_LIBRARY/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="style.css" />
+    
+    <script type="text/javascript" src="javascript/_LIBRARY/bootstrap.min.js"></script>    
     <script type='text/javascript' src='javascript/overlay-func/add-overlay.js'></script>
-    <script type='text/javascript' src='javascript/hideButton.js'></script>
+    <script type='text/javascript' src='javascript/VIEW/hideButton.js'></script>
     <script type='text/javascript' src='javascript/MODEL/database.js'></script>
     <script type='text/javascript' src='javascript/MODEL/userValidation.js'></script>
     <script type='text/javascript' src="javascript/_LIBRARY/Chart.bundle.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet" />
+
+    
 
     <script>
         $(document).ready(function(){
@@ -59,7 +57,7 @@
         });
         
         $(document).ready(function() {
-        $(".backbtn").click(function back(){
+        $("#backbtn").click(function back(){
                $(".fruit").hide();
                $(".veggie").hide();
                $("#vegbtn").show();
@@ -69,8 +67,6 @@
     </script>
 
 
-    <script type='text/javascript' src='javascript/Chart.bundle.min.js'></script>
-    <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet" /></script>
     <title>Your Dashboard</title>
 </head>
 <body>
@@ -80,15 +76,11 @@
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <ul class="nav navbar-nav nav-pills">
-                <li class="active"><a href="#">Dashboard</a></li>
+                <li class="active"><a href="#">Home</a></li>
                 <li><a href="#">Progress</a></li>
                 <li><a href="#">Leaders</a></li>
-
-
                 <li style="float: right;"><a href="#" onclick="logout()"><span class="glyphicon glyphicon-log-in"></span>Logout</a></li>
-
             </ul>
-
         </div>
     </nav>
     <br/>
@@ -144,134 +136,147 @@
     <br/>
     <div class='container'>
         <div class='row'>
-            <div class='col-xs-12 mid dashboard-add-btn'>
+            <div class='col-xs-12 mid waste-btn'>
                 <button class='btn btn-success btn-circle' onclick='openNav()'>Add Waste</button>
             </div>
         </div>
     </div>
   <!-- The overlay -->
 <div id="myNav" class="overlay">
-<!-- Button to close the overlay navigation -->
-<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-
-<a href="javascript:void(0)" class="backbtn" >&#8678;</a>
-<!-- Overlay content -->
-
-
-<!--Fruits-->  
-    <div class="overlay-content container-fluid"> 
+    <div class="container">
         <div class="row">
-            <div class="col-xs-12">
-                <button id="frbtn" class="overlay-icon dropbtn" >Fruits</button>
-                    <div class="fruit-container">
-                        <div class="row">  
-                            <div id="single-fruit" class="col-xs-3 fruit">
-                                <button class="dropbtn overlay-icon">Apple</button>
-                            </div>
-                            <div id="single-fruit" class="col-xs-3 fruit">
-                               <button class="dropbtn overlay-icon">Banana</button>
-                            </div>
-                            <div id="single-fruit" class="col-xs-3 fruit">
-                                 <button class="dropbtn overlay-icon">Orange</button>
-                            </div>  
-                        </div>
-                    <br />
-                        <div class="row">
-                            <div class="col-xs-3 fruit">
-                                <button class="dropbtn overlay-icon">Pear</button>
-                            </div>
-                            <div class="col-xs-3 fruit">
-                               <button class="dropbtn overlay-icon">Melon</button>
-                            </div>
-                            <div class="col-xs-3 fruit">
-                                 <button class="dropbtn overlay-icon">Plum</button>
-                            </div>
-                        </div>
-                    <br />
-                        <div class="row">
-                            <div class="col-xs-3 fruit">
-                                <button class="dropbtn overlay-icon">Cherry</button>
-                            </div>
-                            <div class="col-xs-3 fruit">
-                               <button class="dropbtn overlay-icon">Water&#13;&#10;melon</button>
-                            </div>
-                            <div class="col-xs-3 fruit">
-                                 <button class="dropbtn overlay-icon">Peach</button>
-                            </div>
-                        </div>
-                    <br />
-                        <div class="row">
-                            <div class="col-xs-3 fruit">
-                                <button class="dropbtn overlay-icon">Straw&#13;&#10;berry</button>
-                            </div>
-                            <div class="col-xs-3 fruit">
-                               <button class="dropbtn overlay-icon">Grape</button>
-                            </div>
-                            <div class="col-xs-3 fruit">
-                                 <button class="dropbtn overlay-icon">Ras&#13;&#10;berry</button>
-                            </div>
-                        </div>
-                </div>
+            <!-- Button to close the overlay navigation -->
+            <div class="col-xs-6">
+                <a href="javascript:void(0)" id="backbtn" >&#8678;</a>
             </div>
-            <div class="col-xs-12">
-                <button id="vegbtn" class="dropbtn overlay-icon">Veggies</button>
-                <div class="veggie-container">
-                    <div class="row">
-                        <div class="col-xs-3 veggie">
-                            <button class="dropbtn overlay-icon">Carrot</button>
-                        </div>
-                        <div class="col-xs-3 veggie">
-                           <button class="dropbtn overlay-icon">Potato</button>
-                        </div>
-                        <div class="col-xs-3 veggie">
-                             <button class="dropbtn overlay-icon">Tomato</button>
-                        </div>
-                    </div>
-                <br/>
-                    <div class="row">
-                        <div class="col-xs-3 veggie">
-                            <button class="dropbtn overlay-icon">Carrot</button>
-                        </div>
-                        <div class="col-xs-3 veggie">
-                           <button class="dropbtn overlay-icon">Potato</button>
-                        </div>
-                        <div class="col-xs-3 veggie">
-                             <button class="dropbtn overlay-icon">Tomato</button>
-                        </div>
-
-                    </div>
-                <br/>
-                    <div class="row">
-                        <div class="col-xs-3 veggie">
-                            <button class="dropbtn overlay-icon">Carrot</button>
-                        </div>
-                        <div class="col-xs-3 veggie">
-                           <button class="dropbtn overlay-icon">Potato</button>
-                        </div>
-                        <div class="col-xs-3 veggie">
-                             <button class="dropbtn overlay-icon">Tomato</button>
-                        </div>
-                    </div>
-                <br/>
-                    <div class="row">
-                        <div class="col-xs-3 veggie">
-                            <button class="dropbtn overlay-icon">Carrot</button>
-                        </div>
-                        <div class="col-xs-3 veggie">
-                           <button class="dropbtn overlay-icon">Potato</button>
-                        </div>
-                        <div class="col-xs-3 veggie">
-                             <button class="dropbtn overlay-icon">Tomato</button>
-                        </div>
-                    </div>
-                </div>
-
+            <div class="col-xs-6">
+                <a href="javascript:void(0)" id="closebtn" onclick="closeNav()">&times;</a>
             </div>
-        </div>  
 
-
+        </div>
     </div>
-</div>
+
+
+    <div class="overlay-content container-fluid"> 
+        <div class="row">      
+            <div class="col-xs-12">         
+                <button id="frbtn" class="overlay-icon">Fruits</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">         
+                <button id="vegbtn" class="overlay-icon">Veggies</button>
+            </div>
+        </div>
+        <div class="row">
+                <div class="fruit-container">
+                    <div class="row">  
+                        <div class="col-xs-4 fruit">
+                            <button class="overlay-icon">Apple</button>
+                        </div>
+                        <div class="col-xs-4 fruit">
+                           <button class="overlay-icon">Banana</button>
+                        </div>
+                        <div class="col-xs-4 fruit">
+                             <button class="overlay-icon">Orange</button>
+                        </div>  
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-xs-4 fruit">
+                            <button class="overlay-icon">Pear</button>
+                        </div>
+                        <div class="col-xs-4 fruit">
+                           <button class="overlay-icon">Melon</button>
+                        </div>
+                        <div class="col-xs-4 fruit">
+                             <button class="overlay-icon">Plum</button>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-xs-4 fruit">
+                            <button class="overlay-icon">Cherry</button>
+                        </div>
+                        <div class="col-xs-4 fruit">
+                           <button class="overlay-icon">Water&#13;&#10;melon</button>
+                        </div>
+                        <div class="col-xs-4 fruit">
+                             <button class="overlay-icon">Peach</button>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-xs-4 fruit">
+                            <button class="overlay-icon">Straw&#13;&#10;berry</button>
+                        </div>
+                        <div class="col-xs-4 fruit">
+                           <button class="overlay-icon">Grape</button>
+                        </div>
+                        <div class="col-xs-4 fruit">
+                             <button class="overlay-icon">Ras&#13;&#10;berry</button>
+                        </div>
+                    </div>
+                </div>
+        </div>
+       
+        <div class="row">
+                    <div class="veggie-container">
+                        <div class="row">
+                            <div class="col-xs-4 veggie">
+                                <button class="overlay-icon">Carrot</button>
+                            </div>
+                            <div class="col-xs-4 veggie">
+                               <button class="overlay-icon">Potato</button>
+                            </div>
+                            <div class="col-xs-4 veggie">
+                                 <button class="overlay-icon">Tomato</button>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="row">
+                            <div class="col-xs-4 veggie">
+                                <button class="overlay-icon">Carrot</button>
+                            </div>
+                            <div class="col-xs-4 veggie">
+                               <button class="overlay-icon">Potato</button>
+                            </div>
+                            <div class="col-xs-4 veggie">
+                                 <button class="overlay-icon">Tomato</button>
+                            </div>
+
+                        </div>
+                        <br/>
+                        <div class="row">
+                            <div class="col-xs-4 veggie">
+                                <button class="overlay-icon">Carrot</button>
+                            </div>
+                            <div class="col-xs-4 veggie">
+                               <button class="overlay-icon">Potato</button>
+                            </div>
+                            <div class="col-xs-4 veggie">
+                                 <button class="overlay-icon">Tomato</button>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="row">
+                            <div class="col-xs-4 veggie">
+                                <button class="overlay-icon">Carrot</button>
+                            </div>
+                            <div class="col-xs-4 veggie">
+                                <button class="overlay-icon">Potato</button>
+                            </div>
+                            <div class="col-xs-4 veggie">
+                                <button class="overlay-icon">Tomato</button>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+        
+    
     <footer class='home-footer'>
         <div class='container-fluid'>
             <div class='row mid'>
