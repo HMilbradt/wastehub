@@ -2,11 +2,24 @@
 function openNav() {
 
 	var fruitbtn = document.getElementById("frbtn");
-    var hiddenStuff = document.getElementsByClassName('fruit');
-    for(var i = 0; i != hiddenStuff.length; i++) {  
-        hiddenStuff[i].style.display= "none";
-        fruitbtn.style.display="block";           
+	var veggiebtn = document.getElementById("vegbtn");
+
+	fruitbtn.style.display="block";    
+    veggiebtn.style.display="block";   
+
+    var fruits = document.getElementsByClassName('fruit');
+    var veggies = document.getElementsByClassName('veggie');
+
+    for(var i = 0; i != fruits.length; i++) {  
+        fruits[i].style.display= "none";
     }
+
+    for(var i = 0; i != veggies.length; i++) {  
+        veggies[i].style.display= "none";
+    }
+
+
+
     document.getElementById("myNav").style.height = "100%";
 }
 
